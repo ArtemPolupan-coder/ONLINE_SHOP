@@ -101,6 +101,7 @@ try:
                 keyboard_cart = telebot.types.InlineKeyboardMarkup(keyboard = [[button_order_done]])
                 if callback.data == "get_cart":
                     bot.send_message(chat_id = -1002207494698, message_thread_id = 386, text = f"Замовлення№{cart.id}:\nНазва продукту - {product.name}\nЦіна - {product.price}грн\nКількість {product.count}шт  \n\nІм'я - {cart.name}\nПрізвище - {cart.surname}\nТелефон - {cart.number}\nЕмейл - {cart.email}\nМісто - {cart.city}\nВідділення Нової пошти - {cart.post_office}\nДодаткові Побажання - {cart.additional_wish}\n\nСтатус замовлення - {cart.status}", reply_markup = keyboard_cart)
+                    
                 if callback.data == f"order_done_{cart.id}":
                     order_id = int(callback.data.split('_')[2])
                     get_order = Cart.query.get(order_id)
@@ -108,8 +109,6 @@ try:
                     bot.edit_message_text(text = f"Замовлення№{cart.id}:\nНазва продукту - {product.name}\nЦіна - {product.price}грн\nКількість {product.count}шт  \n\nІм'я - {cart.name}\nПрізвище - {cart.surname}\nТелефон - {cart.number}\nЕмейл - {cart.email}\nМісто - {cart.city}\nВідділення Нової пошти - {cart.post_office}\nДодаткові Побажання - {cart.additional_wish}\n\nСтатус замовлення - {cart.status}", chat_id = callback.message.chat.id, message_id = callback.message.message_id)
                     DATABASE.session.commit()
                 
-
-
     @bot.message_handler(func = lambda message : message.chat.id in user_action, content_types = ["text", "photo"])
     def add_product(message):
         global products
@@ -148,7 +147,7 @@ try:
                 product = Product(name = products["name"], price = products["price"], sale = products["sale"], previous_price = products["previous_price"])
                 DATABASE.session.add(product)
                 DATABASE.session.commit()
-    threading.Thread(target=lambda: bot.polling(skip_pending=True)).start()
+    threading.Thread(target = lambda: bot.polling(skip_pending = True)).start()
     # bot.polling()
 except Exception as error:
     print(error)

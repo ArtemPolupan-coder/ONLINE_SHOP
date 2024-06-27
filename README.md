@@ -17,6 +17,7 @@
 ![](media/gifs/4.gif)
   
 🤖 Також тут є телеграм бот-менеджер. За допомогою якого можна: з легкістю давати або забирати права адміністратора; додавати/видаляти товар; отримувати всю інформацію про всі товари, замовлення та користувачів; ну і звісно відмічати замовлення як виконане/There is also a Telegram bot manager. With the help of which you can: easily give or take away administrator rights; add/remove products; get all the information about all products, orders and users; and, of course, mark the order as completed  
+![](media/gifs/5.gif)
 
 Данний проект має всі необхідні функції для того щоб зробити пофноцінний веб сайт для замовника/This project has all the necessary functions to make a valuable website for the customer
 ***
@@ -28,25 +29,22 @@
 - Jinja - Шаблони та спадкування/Templates and inheritance
 - SQLite3 - Бази даних та їх моделі/Databases and their models 
 ***
-<<<<<<< HEAD
+
 Для того щоб протестувати цей проект є 3 способи/There are 3 ways to test this project:
-1. Перейти на сайт за посиланням/Go to the site at the link [http://artpan.pythonanywhere.com]
-2. Запустити локально, для цього/Run locally, to do this:
+>**УВАГА БОТ ПРАЦЮВАТИМЕ ЛИШЕ, ЯКЩО ВИ ЗАПУСКАЄТЕ ЙОГО ЛОКАЛЬНО/NOTE THE BOT WILL ONLY WORK IF YOU RUN IT LOCALLY**
+>Адмін акаунт на сайті/Admin account on the site
+username: Admin
+email: admin@gmail.com
+password: admin
+1. **Перейти на сайт за посиланням/Go to the site at the link [http://artpan.pythonanywhere.com]**
+2. **Запустити локально, для цього/Run locally, to do this:**
 - Перейдіть за наступним посиланням в репозиторій/Follow the following link to the repository [https://github.com/ArtemPolupan-coder/ONLINE_SHOP.git]
   > Якщо ви вже тут попередній крок не виконуємо/If you are already here, do not perform the previous step
 - Натисніть на зелену кнопку "Code"/Click on the green "Code" button
-=======
-Для того щоб протестувати цей проект є 3 способи:
-1. Перейти на сайт за посиланням [http://artpan.pythonanywhere.com]
-2. Запустити локально, для цього:
-- Перейдіть за наступним посиланням в репозиторій [https://github.com/ArtemPolupan-coder/ONLINE_SHOP.git]
-  > Якщо ви вже тут попередній крок не виконуємо
 - Натисніть на зелену кнопку "Code"
->>>>>>> 48c09caf36a78078b98b5d1c313f3ec96151c281
 ![](media/images/1.png)
 - Далі у вікні яке відкрилося натисніть "Download ZIP"/Next, in the window that opens, click "Download ZIP"
 ![](media/images/2.png)
-<<<<<<< HEAD
 - Після чого збережіть та розпакуйте архів/Then save and unzip the archive 
 - Встановіть пайтон за наступним посиланням/Install the python at the following link [https://www.python.org/downloads/]
   > Якщо у вас встановлений пайтон попередній крок ви пропускаєте/If you have Python installed, skip the previous step
@@ -56,7 +54,7 @@
 - Далі натисніть в верхньому лівому куті "Termainal" "New Termanal"/Then click in the upper left corner of "Terminal" "New Terminal"
 - І встановіть всі модулі написавши/And install all the modules by writing `pip install flask flask_sqlalchemy flask_migrate flask_mail flask_login telebot`
 - Після чого запустіть файл `manage.py`, та перейдіть за посиланням яке з'явилося в терміналі/Then run the file `manage.py`, and follow the link that appears in the terminal
-1. Запуск віддалено (на PythonAnywhere)/Run remotely (on PythonAnywhere)
+3. **Запуск віддалено (на PythonAnywhere)/Run remotely (on PythonAnywhere)**
 - Перейдіть за посиланням [https://www.pythonanywhere.com] та зареєструйтесь/авторизуйтесь, натиснувши відповідну кнопку в верхньому правому куті/Follow the link [https://www.pythonanywhere.com] and register/log in by clicking the appropriate button in the upper right corner
 - Створіть нову консоль "Bash"/Create a new "Bash" console
 ![](/media/images/3.png)
@@ -64,25 +62,6 @@
 - Next mkvirtualenv [назва віртуального оточення] --python=python3.10
 - Далі встановлюємо модулі написавши/Next, install the modules by writing `pip install flask flask_sqlalchemy flask_migrate flask_mail flask_login telebot`
 - Дублюємо вкладку з консолюю та в одній з них виходимо на головну сторінку, після чого натискаємо в правому верхньому куті "Files"/Duplicate the tab with the console and in one of them go to the main page, then click "Files" in the upper right corner
-=======
-- Після чого збережіть та розпакуйте архів 
-- Встановіть пайтон за наступним посиланням [https://www.python.org/downloads/]
-  > Якщо у вас встановлений пайтон попередній крок ви пропускаєте
-- Встановіть VSCode за настпним посиланням [https://code.visualstudio.com/download]
-  > Якщо у вас встановлений VSCode попередній крок ви пропускаєте
-- Після чого відкрийте папку в VSCode 
-- Далі натисніть в верхньому лівому куті "Termainal" "New Termanal"
-- І встановіть всі модулі написавши `pip install flask flask_sqlalchemy flask_migrate flask_mail flask_login telebot`
-- Після чого запустіть файл `manage.py`, та перейдіть за посиланням яке з'явилося в терміналі
-1. Запуск віддвлено (на PythonAnywhere)
-- Перейдіть за посиланням [https://www.pythonanywhere.com] та зареєструйтесь/авторизуйтесь, натиснувши відповідну кнопку в верхньому правому куті
-- Створіть нову консоль "Bash"
-![](/media/images/3.png)
-- В ній пропишіть `git clone https://github.com/ArtemPolupan-coder/ONLINE_SHOP.git`
-- Далі mkvirtualenv [назва віртуального оточення] --python=python3.10
-- Далі встановлюємо модулі написавши `pip install flask flask_sqlalchemy flask_migrate flask_mail flask_login telebot`
-- Дублюємо вкладку з консолюю та в одній з них виходимо на головну сторінку, після чого натискаємо в правому верхньому куті "Files"
->>>>>>> 48c09caf36a78078b98b5d1c313f3ec96151c281
 ![](/media/images/4.png)
 - Там шукаємо файл `Online_Shop/Shop/data.db`, та видаляємо його/There we look for the file `Online_Shop/Shop/data.db`, and delete it
 - Потім шукаємо папку `Online_Shop/Shop/migrations`, і також видаляємо/Then we look for the folder `Online_Shop/Shop/migrations`, and also delete
