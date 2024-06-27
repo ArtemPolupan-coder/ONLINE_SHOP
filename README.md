@@ -238,7 +238,10 @@
 ***
 # Висновок/Conclusion
 Данний проект був неймовірно корисним для особистого розвитку та для отримання нових навичок професійного рівня, а також ознайомлення з jinja, JavaScript, Flask/This project was incredibly useful for personal development and for acquiring new professional-level skills, as well as for getting acquainted with jinja, JavaScript, Flask
-#   O N L I N E _ S T O R E  
- #   O N L I N E _ S T O R E  
- #   O N L I N E _ S H O P  
+#   O N L I N E _ S T O R E 
+ 
+ #   O N L I N E _ S T O R E 
+ 
+ #   O N L I N E _ S H O P 
+ 
  

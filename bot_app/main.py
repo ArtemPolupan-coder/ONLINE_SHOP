@@ -8,6 +8,7 @@ try:
     from shop_page.models import Product
     import flask
     from cart_page.models import Cart
+    import threading
 
     db = sqlite3.connect(database = os.path.abspath(__file__ + "/../../Shop/data.db"))
     cursor = db.cursor()
@@ -30,7 +31,6 @@ try:
                 }
     user_action = {}
     product_db = {}
-
 
     @bot.message_handler(commands= ["start"])
     def start_message(message : telebot.types.Message):
@@ -76,7 +76,7 @@ try:
             
             for product in Product.query.all():
 
-                button_delete_product = telebot.types.InlineKeyboardButton(text = "DELETE PRODUCT ���️", callback_data = f"delete_product_{product.id}")
+                button_delete_product = telebot.types.InlineKeyboardButton(text = "DELETE PRODUCT 🗑️", callback_data = f"delete_product_{product.id}")
                 keyboard_manage_product = telebot.types.InlineKeyboardMarkup(keyboard = [[button_delete_product]])
 
                 if callback.data == "get_product":
@@ -148,7 +148,7 @@ try:
                 product = Product(name = products["name"], price = products["price"], sale = products["sale"], previous_price = products["previous_price"])
                 DATABASE.session.add(product)
                 DATABASE.session.commit()
-
-    bot.polling()
+    threading.Thread(target=lambda: bot.polling(skip_pending=True)).start()
+    # bot.polling()
 except Exception as error:
     print(error)
