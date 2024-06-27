@@ -11,7 +11,6 @@
     <div class="main">
         <div class="products-in-cart">
              <!-- виводемо всі подукти які є у cart -->
-            {% if len_products != 1 %}
                 {% for product in products %}
                         <div class="product-in-cart" id="product-{{ product.id }}">
                             
@@ -20,7 +19,6 @@
                             <div class="text">
                                 <h1 class="name">{{ product.name }}</h1>
                                 <div class="count-quantity">
-                                    <!-- <p>1</p> -->
                                     <button class="minus" id="minus-{{ product.id }}"><p>-</p></button>
                                     <div class="quantity"><p>{{ product.count }}</p></div>
                                     <button class="plus" id="plus-{{ product.id }}"><p>+</p></button>
@@ -29,7 +27,6 @@
                             </div>
                         </div>
                 {% endfor %}
-            {% endif %}
         </div>
          <!-- робимо кнопки  купити де виводимо общю ціну -->
             <div class="go-to-order">

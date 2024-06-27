@@ -12,8 +12,6 @@
     {% for product in products %}
         <div class="cart">
             <img class="product-image" src="{{ url_for('shop.static', filename = 'image/' + product.name + '.png')}}">
-            
-
             <div class="product-text-div">
                 <p class="product-name">{{ product.name }}</p>
                     <div class="price-div">
@@ -21,7 +19,7 @@
                     </div>
                     <p class="percent-sale">Знижка  {{ product.sale }}%</p>
                 <div class="price-div">
-                    <p class="price">{{ product.price }}грн<p class="currency">грн</p></p>
+                    <p class="price">{{ product.price }}<p class="currency">грн</p></p>
                 </div>
                 <button class="buy-button" value="{{ product.id }}">КУПИТИ</button>
                 <p class="currency">ЄМНІСТЬ:</p>
