@@ -2,6 +2,7 @@
 
 ***
 #### Розробники проекту:
+- Артем Полупан/Artem Polupan (https://github.com/ArtemPolupan-coder)
 - Назар Зозуля/Nazar Zozulya (https://github.com/Nazar-Zozulya)
 - Архип Гончар/Archip Gonchar (https://github.com/Arhip-ops)
 ***
