@@ -100,11 +100,9 @@ password: admin
 ## Реєстрування сторінок/Registering pages
 ![](/media/images/12.png) 
 ![](/media/images/13.png)
-<html>
-  <head>
-  try:
+<code>
+try:
     # імпорт необхідних бібліотек
-
     import home_page
     import authorization_page
     import registration_page
@@ -170,8 +168,7 @@ password: admin
     )
 except Exception as error:
     print(error)
-  </head>
-</html>
+</code>
 > Тут ми створюмо нове посилання для нашої сторінки та реєструємо його в проекті/Here we create a new link for our page and register it in the project
 
 ## Конфігурація емейлу/Email configuration
