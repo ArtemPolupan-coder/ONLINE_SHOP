@@ -2,6 +2,7 @@
 
 ***
 #### Розробники проекту:
+- Артем Полупан/Artem Polupan (https://github.com/ArtemPolupan-coder)
 - Назар Зозуля/Nazar Zozulya (https://github.com/Nazar-Zozulya)
 - Архип Гончар/Archip Gonchar (https://github.com/Arhip-ops)
 ***
@@ -36,7 +37,7 @@
 username: Admin
 email: admin@gmail.com
 password: admin
-1. **Перейти на сайт за посиланням/Go to the site at the link [http://artpan.pythonanywhere.com]**
+1. **Перейти на сайт за посиланням/Go to the site at the link https://shopiing.pythonanywhere.com**
 2. **Запустити локально, для цього/Run locally, to do this:**
 - Перейдіть за наступним посиланням в репозиторій/Follow the following link to the repository [https://github.com/ArtemPolupan-coder/ONLINE_SHOP.git]
   > Якщо ви вже тут попередній крок не виконуємо/If you are already here, do not perform the previous step

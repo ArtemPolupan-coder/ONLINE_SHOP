@@ -1,17 +1,17 @@
 try:
     import os
-    import sqlite3
+    # import sqlite3
     import telebot
     from registration_page.models import User
     import Shop
     from Shop.settings import DATABASE
     from shop_page.models import Product
-    import flask
+    # import flask
     from cart_page.models import Cart
     import threading
 
-    db = sqlite3.connect(database = os.path.abspath(__file__ + "/../../Shop/data.db"))
-    cursor = db.cursor()
+    # db = sqlite3.connect(database = os.path.abspath(__file__ + "/../../Shop/data.db"))
+    # cursor = db.cursor()
 
     token = "7237016951:AAGrWiHW83Jti-EJKwquFgQTtIMaRIdG1eI"
     bot = telebot.TeleBot(token = token)
@@ -25,6 +25,7 @@ try:
     products = {
                     'name': '',
                     'price': '',
+                    'count': '',
                     'sale': '',
                     'previous_price': '',
                     'image': ''
@@ -129,8 +130,13 @@ try:
             user_action[chat_id] = 'previous_price'
         if step == 'previous_price':
             products["previous_price"] = text
+            bot.send_message(chat_id, message_thread_id = 92, text = "Введіть кількість товару на складі:")
+            user_action[chat_id] = 'count'
+        if step == 'count':
+            products["count"] = text
             bot.send_message(chat_id, message_thread_id = 92, text = "Надішліть зображення товару\n(в стислому форматі)")
             user_action[chat_id] = 'image'
+
         if step == 'image':
             file_info = bot.get_file(message.photo[len(message.photo)-1].file_id)
             downloaded_file = bot.download_file(file_info.file_path)
@@ -140,11 +146,11 @@ try:
                 new_file.write(downloaded_file)
 
             bot.reply_to(message, "Фото завантажено!") 
-            bot.send_message(chat_id, message_thread_id = 92, text = f"Товар був успішно доданий!")
+            bot.send_message(chat_id, message_thread_id = 92, text = "Товар був успішно доданий!")
             user_action[chat_id] = None
         
             with Shop.settings.shop_app.app_context():
-                product = Product(name = products["name"], price = products["price"], sale = products["sale"], previous_price = products["previous_price"])
+                product = Product(name = products["name"], price = products["price"], sale = products["sale"], previous_price = products["previous_price"], count = products["count"])
                 DATABASE.session.add(product)
                 DATABASE.session.commit()
     threading.Thread(target = lambda: bot.polling(skip_pending = True)).start()
